@@ -1,0 +1,133 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    background-color: #FFF5E1;
+    transition: background-color 0.5s ease;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 标题样式 */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    color: #FF6B6B;
+    transition: color 0.5s ease;
+}
+
+/* 随机按钮样式 */
+.random-button {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 28px;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+.random-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.random-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 结果卡片样式 */
+.result-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 30px 20px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* 食物标签样式 */
+.food-label {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* 推荐句子标签样式 */
+.sentence-label {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* 动画效果 */
+@keyframes scaleAnimation {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1.0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.food-label.animate {
+    animation: scaleAnimation 0.5s ease-in-out;
+}
+
+.sentence-label.animate {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .random-button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    
+    .result-card {
+        padding: 20px 15px;
+        margin-top: 40px;
+    }
+    
+    .food-label {
+        font-size: 24px;
+    }
+    
+    .sentence-label {
+        font-size: 16px;
+    }
+}
